@@ -9,8 +9,8 @@ export const authOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
-      clientId: "a492f72afbc36840f404",
-      clientSecret: "1acd57f3dbe6ec2bb8cd23e02a1520d01d0fd6b6",
+      clientId: process.env.GITHUB_CLIENT_ID || "",
+      clientSecret: process.env.GITHUB_SECRET || "",
     }),
   ],
   callbacks: {
